@@ -1,0 +1,25 @@
+{
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "jest.jestCommandLine": "yarn test",
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#3d0b83",
+    "activityBar.activeBorder": "#06b9a5",
+    "activityBar.background": "#3d0b83",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#b0520f",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "sash.hoverBorder": "#3d0b83",
+    "statusBar.background": "#270754",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#3d0b83",
+    "statusBarItem.remoteBackground": "#270754",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#270754",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#27075499",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "commandCenter.border": "#e7e7e799"
+  },
+  "peacock.color": "#270754"
+}

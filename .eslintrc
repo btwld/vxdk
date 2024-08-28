@@ -1,0 +1,41 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "tsconfigRootDir": "."
+  },
+  "ignorePatterns": ["dist/**", "docs/**", "**/*/__snapshots__/**"],
+  "plugins": ["@typescript-eslint","no-only-tests", "eslint-comments", "prettier" ,"solid","cypress"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:solid/typescript",
+    "plugin:cypress/recommended"
+  ],
+  "env": {
+    "jest": true,
+    "mocha": true
+  },
+  "rules": {
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      { "prefer": "type-imports" }
+    ],
+    "@typescript-eslint/no-empty-function": [
+      "error",
+      { "allow": ["arrowFunctions"] }
+    ],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/no-namespace": "off"
+  }
+}

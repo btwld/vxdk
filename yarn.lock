@@ -3306,11 +3306,6 @@ electron-to-chromium@^1.5.4:
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.5.13.tgz"
   integrity sha512-lbBcvtIJ4J6sS4tb5TLp1b4LyfCdMkwStzXPyAgVgTRAsep4bvrAGaBOP7ZJtQMNJpSQ9SqG4brWOroNaQtm7Q==
 
-eme-encryption-scheme-polyfill@^2.1.5:
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/eme-encryption-scheme-polyfill/-/eme-encryption-scheme-polyfill-2.1.5.tgz#86338bdd3b13f04ba02fa36758501c7c6c122efe"
-  integrity sha512-z9BKXV4TCYjmar0wiZLObZ0J8HE13VIg7Zq/iyPWdbEfROtxVXEJalknWKtBR5XNezzy15/zWS964TGbcAWlPg==
-
 emittery@^0.13.1:
   version "0.13.1"
   resolved "https://registry.npmjs.org/emittery/-/emittery-0.13.1.tgz"
@@ -6215,13 +6210,6 @@ seroval@^1.0.4:
   version "1.0.5"
   resolved "https://registry.npmjs.org/seroval/-/seroval-1.0.5.tgz"
   integrity sha512-TM+Z11tHHvQVQKeNlOUonOWnsNM+2IBwZ4vwoi4j3zKzIpc5IDw8WPwCfcc8F17wy6cBcJGbZbFOR0UCuTZHQA==
-
-shaka-player@^4.10.12:
-  version "4.10.12"
-  resolved "https://registry.yarnpkg.com/shaka-player/-/shaka-player-4.10.12.tgz#29f9ffb0f7f3a67e5ccddbb48ba5601c911079de"
-  integrity sha512-Gn8MmSsWU/yrJyJLwEGZYQwz/09y6hMW+HaPnkC/+s3fgXbVYPgrpra45T0aCLV4LgfjXRf+uHDjVydUW5rTZA==
-  dependencies:
-    eme-encryption-scheme-polyfill "^2.1.5"
 
 shebang-command@^2.0.0:
   version "2.0.0"
