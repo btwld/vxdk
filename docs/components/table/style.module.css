@@ -1,0 +1,7 @@
+.container {
+
+}
+
+.container::-webkit-scrollbar {
+  appearance: none;
+}

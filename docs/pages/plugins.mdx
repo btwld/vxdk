@@ -1,0 +1,63 @@
+# Plugins
+
+import {TwoColumnTable} from '../components/table';
+
+VXDK is designed to be extensible. You can create your own plugins to extend the functionality of the player. Plugins can be used to add new features, modify existing features, or even create new themes.
+
+When looking at the source code, you will see that all major features are implemented as plugins. This includes core features like load, state, autoplay, and others.
+
+
+
+## Built-in Plugins
+
+<TwoColumnTable headers={[
+  'Plugin',
+  'Description'
+]} data={[
+  ['autoplay', 'Automatically play the video when the player is ready'],
+  ['fullscreen', 'Manage the fullscreen state of the player'],
+  ['airplay', 'Manage the airplay state of the player'],
+  ['pip', 'Manage the picture-in-picture state of the player'],
+  ['state', 'Manage the event system and state of the player'],
+  ['dimensions', 'Manage the dimension changes of the player'],
+  ['keyboard', 'Manage the keyboard events of the player'],
+  ['loop', 'Manage the loop state of the player'],
+  ['persistOptions', 'Persist the options of the player'],
+]}/>
+
+### autoplay
+
+The autoplay plugin is responsible for automatically playing the video when the player is ready.
+
+### fullscreen
+
+The fullscreen plugin is responsible for managing the fullscreen state of the player.
+
+### airplay
+
+The airplay plugin is responsible for managing the airplay state of the player.
+
+### pip
+
+The pip plugin is responsible for managing the picture-in-picture state of the player.
+
+### state
+
+The state plugin is responsible for the event system and state management of the player.
+
+### dimensions
+
+The dimensions plugin is responsible for managing the dimension changes of the player
+
+
+### keyboard
+
+The keyboard plugin is responsible for managing the keyboard events of the player.
+
+### loop
+
+The loop plugin is responsible for managing the loop state of the player.
+
+### persistOptions
+
+The persistOptions plugin is responsible for persisting the options of the player.

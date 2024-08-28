@@ -1,0 +1,12 @@
+.container {
+  @apply relative grid place-items-center;
+}
+
+.container.is_iframe,
+.container > video {
+  @apply absolute inset-0 w-full h-full bg-black;
+}
+
+.container:not(.is_iframe) > video {
+  @apply relative aspect-w-16 aspect-h-9;
+}

@@ -1,0 +1,8 @@
+.label {
+  @apply flex items-center px-4 py-2 cursor-pointer h-9 select-none transition-colors hover:bg-gray-700;
+}
+
+.icon {
+  @apply text-white text-xl w-5 mr-2;
+}
+

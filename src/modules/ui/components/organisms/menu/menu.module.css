@@ -1,0 +1,5 @@
+.menu_container {
+  @apply w-56 bg-gray-900 bg-opacity-95 shadow-md rounded-lg text-xs py-2 overflow-y-auto max-h-full;
+  scrollbar-color: #d1d5db6b #111827;
+  scrollbar-width: thin;
+}

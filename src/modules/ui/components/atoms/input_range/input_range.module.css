@@ -1,0 +1,63 @@
+.primary {
+  --thumb-color: var(--vxdk-primary-color);
+}
+
+.white {
+  --thumb-color: #fff;
+}
+
+.container {
+  --track-color: rgba(255, 255, 255, 0.4);
+  --track-color-focused: transparent;
+  --track-height: 4px;
+  --track-area-height: var(--thumb-size);
+  --track-radius: calc(var(--track-height) / 2);
+
+  --timeline-color: var(--thumb-color);
+  --timeline-buffer-color: rgba(255, 255, 255, 0.6);
+
+  --thumb-radius: 50%;
+  --thumb-size: 15px;
+
+  @apply flex items-center relative w-full;
+  font-size: 0;
+  line-height: 0;
+}
+
+.timelineContainer {
+  @apply w-full absolute top-0 bottom-0 left-0 z-0 m-auto pointer-events-none overflow-hidden;
+  background: var(--track-color);
+  height: var(--track-height);
+  border-radius: var(--track-radius);
+}
+
+.timelineBuffer,
+.timeline {
+  @apply absolute top-0 left-0 h-full z-10;
+}
+
+.timelineBuffer {
+  @apply z-0 transition-all duration-100;
+  background: var(--timeline-buffer-color);
+}
+
+.timeline {
+  background: var(--timeline-color);
+}
+
+.range {
+  @apply w-full z-10 block appearance-none outline-none bg-transparent focus:outline-none cursor-pointer;
+  height: var(--thumb-size);
+}
+
+.range::range-thumb {
+  @apply appearance-none cursor-pointer relative;
+  border-radius: var(--thumb-radius);
+  background: var(--thumb-color);
+  height: var(--thumb-size);
+  width: var(--thumb-size);
+}
+
+.range::range-track {
+  @apply w-full cursor-pointer bg-transparent border-transparent text-transparent;
+}

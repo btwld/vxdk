@@ -1,0 +1,53 @@
+{
+  "name": "nextra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "build": "next build",
+    "typedoc": "typedoc",
+    "build:typedoc": "yarn typedoc && node ./scripts/sanitize-typedoc.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@docsearch/react": "^3.5.2",
+    "@headlessui/react": "^1.7.18",
+    "@heroicons/react": "^2.0.18",
+    "@theguild/remark-npm2yarn": "^0.3.0",
+    "@vercel/analytics": "^1.1.2",
+    "@vercel/og": "^0.6.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "copy-to-clipboard": "^3.3.3",
+    "next": "^14.2.4",
+    "next-sitemap": "^4.2.3",
+    "nextra": "2.13.4",
+    "nextra-theme-docs": "2.13.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.2.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/mdx": "^2.0.13",
+    "@types/node": "^20.14.2",
+    "@types/react": "^18.3.3",
+    "@typescript-eslint/eslint-plugin": "^7.13.0",
+    "@typescript-eslint/parser": "^7.13.0",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-mdx": "^3.1.5",
+    "postcss": "^8.4.32",
+    "postcss-import": "^15.1.0",
+    "prettier": "^2.8.8",
+    "replace-in-file": "^6.3.2",
+    "tailwindcss": "^3.4.4",
+    "typedoc": "^0.26.6",
+    "typedoc-plugin-markdown": "^4.2.6",
+    "typescript": "^5.4.5"
+  }
+}

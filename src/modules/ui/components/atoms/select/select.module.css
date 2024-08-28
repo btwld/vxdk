@@ -1,0 +1,11 @@
+.select_container {
+  @apply relative bg-gray-800 rounded cursor-pointer;
+}
+
+.select {
+  @apply p-2 w-full rounded bg-transparent appearance-none focus:outline-none focus:ring-2 focus:ring-blue-600;
+}
+
+.icon {
+  @apply absolute right-0 inset-y-0 mr-2 flex items-center pointer-events-none;
+}

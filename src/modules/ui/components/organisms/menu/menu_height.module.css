@@ -1,0 +1,7 @@
+.menu_height {
+  @apply flex items-end pointer-events-none;
+}
+
+.menu_height > * {
+  @apply pointer-events-auto;
+}

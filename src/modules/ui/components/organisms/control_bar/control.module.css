@@ -1,0 +1,18 @@
+.control {
+  @apply absolute inset-0 opacity-0 transition-opacity duration-200 pointer-events-none;
+}
+
+.backdrop {
+  @apply block absolute inset-x-0 bottom-0 w-full h-1/2;
+  z-index: 1;
+  inset-inline: 0;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.control_container {
+  @apply transform duration-200 ease-in-out absolute inset-x-0 bottom-0 z-10 w-full h-full bg-transparent text-gray-100 pointer-events-none;
+}
+
+.control_bar {
+  @apply absolute inset-x-0 bottom-0 flex flex-col h-12 mx-2 mb-4 pointer-events-auto;
+}

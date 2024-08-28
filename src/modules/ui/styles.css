@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Use to customizing the control bar colors */
+:root {
+  --vxdk-primary-color: blue;
+  --vxdk-on-primary-color: white;
+}

@@ -1,0 +1,19 @@
+.button {
+  @apply inline-flex justify-center items-center p-1 rounded-lg transition-all hh:hover:shadow-sm;
+}
+
+@media (hover: hover) {
+  .button:hover {
+    background-color: var(--vxdk-primary-color);
+    color: var(--vxdk-on-primary-color);
+  }
+  
+  .button:hover > svg {
+    color: var(--vxdk-on-primary-color);
+  }
+}
+
+.button_active {
+  @apply shadow-sm;
+  background-color: var(--vxdk-primary-color);
+}

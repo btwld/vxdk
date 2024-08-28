@@ -1,0 +1,11 @@
+.time_display {
+  @apply min-w-min text-sm text-white text-opacity-70 font-normal antialiased tracking-wider flex items-center justify-center select-none py-1;
+}
+
+.time {
+  @apply ordinal tabular-nums;
+}
+
+.separator {
+  @apply mx-1;
+}

@@ -1,0 +1,39 @@
+.container {
+  @apply absolute transition-all duration-200 inset-0 z-10;
+}
+
+.container.is_hidden {
+  @apply opacity-0 pointer-events-none;
+}
+
+.container.transition_ended {
+  @apply pointer-events-none;
+}
+
+.wrapper {
+  @apply absolute inset-0 m-4;
+}
+
+.overlay {
+  @apply absolute inset-0 bg-black bg-opacity-80 -m-4;
+}
+
+.center_control {
+  @apply absolute inset-1/2 transform -translate-x-6 -translate-y-6 -mt-1 -ml-1;
+}
+
+.right_control {
+  @apply absolute z-20 right-0 flex flex-col;
+}
+
+.bottom_control {
+  @apply absolute inset-x-0 bottom-6 flex justify-between items-end;
+}
+
+.bottom_control > div {
+  @apply flex;
+}
+
+.seekbar_control {
+  @apply absolute inset-x-0 bottom-0 h-6 flex items-center;
+}

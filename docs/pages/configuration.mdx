@@ -1,0 +1,46 @@
+import {OptionTable} from "../components/table";
+
+# Configuration
+
+## Playback Options
+
+
+<OptionTable
+  headers={['Option', 'Type', 'Description']}
+  options={[
+    ['source', 'string', 'An URL to the source of the video.', ],
+    ['preload', 'auto \| metadata \| none', 'Hint about what content to load before video is played.'],
+    ['loop', 'bool', 'If specified, the player will automatically seek back to the start upon reaching the end of the video.'],
+    ['autoPlay', 'bool', 'Indicates that the video should start playing as soon as it\'s ready.'],
+    ['playsInline', 'bool', 'Indicates that the video is to be played "inline", within the element\'s playback area.'],
+    ['muted', 'bool', 'Indicates the default setting of the audio contained in the video. If set, the audio will be initially silenced.'],
+    ['startTime', 'number', 'Time in seconds where you would like the video to start from.'],
+    ['volume', 'number', 'Indicates the starting volume of the player.'],
+    ['crossorigin', 'anonymous \| use-credentials', 'Indicates whether to use CORS to fetch the related video.'],
+    ['poster', 'string', 'A URL for an image to be shown while the video is downloading.'],
+    ['aspectRatio', 'number', 'Aspect ratio you would like the player to maintain.'],
+
+
+  ]}
+/>
+
+## Usage
+
+
+```html
+<!-- Element to attach VXDK -->
+<div id="vxdk"></div>
+
+<script>
+  const options = {
+    source: "https://url-to/video",
+    preload: "metadata",
+    loop: false,
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const el = document.getElementById("vxdk");
+    const vxdk = Vxdk.init(el, options);
+  });
+</script>
+```

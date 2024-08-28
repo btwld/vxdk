@@ -1,0 +1,27 @@
+.startview {
+  @apply flex justify-center items-center absolute inset-0 text-white h-full w-full;
+}
+
+.button {
+  @apply text-white;
+  z-index: 1;
+}
+
+.poster {
+  @apply absolute inset-0;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.poster:after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: "100%";
+  height: "100%";
+  right: 0;
+  bottom: 0;
+}

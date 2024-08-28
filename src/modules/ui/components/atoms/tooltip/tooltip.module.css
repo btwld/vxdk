@@ -1,0 +1,3 @@
+.tooltip {
+  @apply absolute bottom-full select-none bg-gray-900 antialiased tracking-wide text-white text-sm font-normal py-1 px-2 shadow-md rounded-md whitespace-nowrap bg-opacity-95;
+}

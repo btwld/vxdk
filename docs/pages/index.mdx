@@ -1,0 +1,97 @@
+import { Bleed,Callout } from 'nextra-theme-docs'
+
+import DemoPlayer from "../components/DemoPlayer";
+
+# VXDK
+
+**Video Experience Development Kit** provides SDKs and building blocks to enable the creation of engaging and interactive video experiences.
+
+<Callout type="warning" emoji="⚠️">
+  Currently in beta and is subject to change.
+</Callout>
+
+<br />
+
+<DemoPlayer />
+
+## Overview
+
+- Modern & extensible video player
+- Beautiful & simple API
+- Easily configurable
+- Dynamically loaded plugin system
+- Hooks & Middleware - Easy control and override player behavior.
+- UI optimized for mobile
+- Extend UI with Solid.js components.
+- Standardized event system across all player adapters
+
+## Features
+
+- Responsive - works on screen of any size.
+- Picture-in-picture - Supports picture-in-picture mode.
+- Keyboard shortcuts
+- Hls & Dash support
+- Monetization - Google IMA & Vast support
+- Fullscreen - Supports fullscreen mode.
+
+### Coming soon
+
+- Preview thumbnails
+- Close captions
+
+## Installation
+
+```
+$ npm install @bitwild/vxdk
+```
+
+### ES Module
+
+```ts
+import Vxdk from "@bitwild/vxdk";
+
+const vxdk = Vxdk.init(element);
+```
+
+### HTML
+
+Integrating VXDK into a project without a JavaScript framework is straight forward. If you're using a simple HTML page, you can add VXDK via a script tag. You can load through a CDN like this.
+
+#### CSS
+
+```html
+<link href="https://cdn.jsdelivr.net/npm/@bitwild/vxdk/dist/style.css" />
+```
+
+
+#### JavaScript
+
+```html
+<script
+  type="module"
+  src="https://cdn.jsdelivr.net/npm/@bitwild/vxdk/dist/main.js"
+></script>
+<!-- If you need to support IE 11 and Edge 12 - 18 -->
+<script
+  nomodule
+  src="https://cdn.jsdelivr.net/npm/@bitwild/vxdk/dist/vxdk.umd.js"
+></script>
+```
+
+For all configuration options please see the [Configuration](configuration) section.
+
+```html
+<!-- Element to attach VXDK -->
+<div id="vxdk"></div>
+
+<script>
+  const options = {
+    source: "https://url-to/video",
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const el = document.getElementById("vxdk");
+    const vxdk = Vxdk.init(el, options);
+  });
+</script>
+```

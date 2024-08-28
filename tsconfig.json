@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "types": ["vite-plugin-solid-svg/types-component-solid","vite/client"],
+    "noEmit": true,
+    "isolatedModules": true,
+    "useDefineForClassFields": true,
+    "strict": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@ui/*": ["modules/ui/*"],
+      "@components/*": ["modules/components/*"],
+      "@utils/*": ["modules/utils/*"],
+      "@plugins/*": ["modules/plugins/*"],
+      "@common/*": ["modules/common/*"],
+    }
+  },
+  "include": ["./src"],
+  "exclude": ["node_modules"]
+}

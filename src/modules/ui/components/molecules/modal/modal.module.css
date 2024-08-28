@@ -1,0 +1,11 @@
+.backdrop {
+  @apply fixed inset-0 z-10 bg-black bg-opacity-80 grid place-items-center;
+}
+
+.content {
+  @apply flex flex-col w-4/5 mx-auto bg-gray-900 bg-opacity-95 text-gray-300 rounded-lg px-4 py-4;
+}
+
+.modal_title {
+  @apply text-base font-semibold mb-4;
+}

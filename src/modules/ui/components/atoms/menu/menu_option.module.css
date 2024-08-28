@@ -1,0 +1,15 @@
+.button {
+  @apply bg-opacity-95 text-left font-semibold h-9 w-full appearance-none px-4 py-2 flex justify-between items-center select-none transition-colors hover:bg-gray-700;
+}
+
+.label {
+  @apply mr-4;
+}
+
+.active_label {
+  @apply flex items-center font-normal text-gray-400;
+}
+
+.icon {
+  @apply text-white text-2xl -mr-1;
+}

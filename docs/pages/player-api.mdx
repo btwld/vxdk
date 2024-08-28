@@ -1,0 +1,188 @@
+# API Reference
+
+VXDK provides a simple API to interact with the player. You can use the API to control the playback, listen to events, and get the current state of the player.
+
+import {TwoColumnTable, OptionTable} from '../components/table';
+
+## Methods
+
+<TwoColumnTable headers={
+  ['Method', 'Description']
+} data={[
+  ['load', 'Loads playback of the video in source'],
+  ['play', 'Starts playback'],
+  ['togglePlay', 'Toggle (play/pause) playback of video'],
+  ['replay', 'Plays the video from the beginning.'],
+  ['pause', 'Pauses playback of video'],
+  ['isPlaying', 'Returns true if video is currently playing'],
+  ['setSource', 'Sets the source of the video'],
+  ['stop', 'Stops playback of video'],
+  ['setVolume', 'Sets volume of the video'],
+  ['getVolume', 'Returns current volume of the video'],
+  ['mute', 'Mutes the video'],
+  ['unmute', 'Unmutes video'],
+  ['toggleMute', 'Toggles (mute/unmute) video'],
+  ['isMuted', 'Returns true if audio is muted'],
+  ['seekTo', 'Method for seeking to time in video'],
+  ['seekToPercentage', 'Method for seeking to a percentage of the video'],
+  ['getCurrentTime', 'Returns the current time of the playback'],
+  ['getDuration', 'Returns duration of video playback'],
+  ['getBufferedPercentage', 'Returns the total percentage percetage'],
+  ['isLive', 'Returns true if it\'s live stream'],
+  ['setLevel', 'Sets quality level for video playback if available'],
+  ['getCurrentLevel', 'Returns the current quality level from playback'],
+  ['getLevels', 'Returns all available quality playback getLevels'],
+  ['isAutoLevelEnabled', 'Returns true if ABR is set to \'auto\''],
+  ['enterFullscreen', 'Method to enter fullscreen mode'],
+  ['exitFullscreen', 'Method to exit fullscreen mode'],
+  ['toggleFullscreen', 'Toggles fullscreen mode'],
+  ['isFullscreen', 'Returns true if vxdk is in fullscreen'],
+  ['setPlaybackRate', 'Sets playback speed of the video'],
+  ['getPlaybackRate', 'Returns current playback speed of the video'],
+  ['enterPip', 'Enter picture-in-picture mode'],
+  ['exitPip', 'Exist picture-in-picture mode'],
+  ['togglePip', 'Toggles picture-in-picture mode'],
+  ['isPip', 'Returns true if vxdk is in picture-in-picture mode'],
+  ['getContext', 'Returns the current context of the player'],
+  ['getState', 'Returns the current state of VXDK'],
+  ['getPlugin', 'Returns a instantiated plugin within VXDK'],
+  ['getPluginByName', 'Returns a initialized plugin within VXDK'],
+  ['getOptions', 'Returns the current initialized options of the player'],
+  ['getAutoPlay', 'Gets autoplay setting.'],
+  ['getVersion', 'Returns VXDK version number'],
+  ['getRootElement', 'Returns root element for vxdk'],
+  ['getWidth', 'Returns the current width of the VXDK'],
+  ['getHeight', 'Returns the current height of the VXDK'],
+  ['destroy', 'Destroy and cleans up vxdk'],
+]}
+/>
+
+## Events
+
+The vxdk player emits various events that you can listen to and handle using the `on` method. To remove a listener, use the `off` method.
+
+### Usage
+
+You can listen to events using the `on` method and specifying the event name or the enum value.
+
+```typescript
+// Using the enum value
+vxdk.on(PLAYBACK_EVENT.PLAYING, () => {
+  console.log('Playback has started');
+});
+
+// Using the event name
+vxdk.on('playback.ended', () => {
+  console.log('Playback has ended');
+});
+```
+
+
+### Playback Events
+
+These events are related to the playback state and progress of the media. The playback events will be prefixed with `playback.`. You can also use the `PLAYBACK_EVENT` enum to listen to these events.
+
+<TwoColumnTable headers={[
+  'Event',
+  'Description'
+]} data={[
+  ['loadstart', 'Fired when the browser has started to load the resource.'],
+  ['loadedmetadata', 'Fired when the metadata has been loaded.'],
+  ['play', 'Fired when playback has begun.'],
+  ['pause', 'Fired when playback has been paused.'],
+  ['playing', 'Fired when playback is ready to start after having been paused or delayed due to a lack of data.'],
+  ['ended', 'Fired when playback has stopped because the end of the media was reached.'],
+  ['waiting', 'Fired when playback has stopped because of a temporary lack of data.'],
+  ['timeupdate', 'Fired when the time indicated by the currentTime attribute has been updated.'],
+  ['duration.changed', 'Fired when the duration attribute has been updated.'],
+  ['buffered.changed', 'Fired when the amount of buffered media changes.'],
+  ['autolevel.changed', 'Fired when the automatic quality level changes.'],
+  ['levels.loaded', 'Fired when the available quality levels are loaded.'],
+  ['level.changed', 'Fired when the current quality level changes.'],
+  ['audio.changed', 'Fired when the audio track changes.'],
+  ['volume.changed', 'Fired when the volume has changed.'],
+  ['rate.change', 'Fired when the playback rate has changed.'],
+  ['error', 'Fired when an error occurred while fetching the media data, or the type of the resource is not a supported media format.'],
+  ['destroy', 'Fired when the player instance is destroyed.'],
+]} />
+
+
+
+
+### Context Events
+
+These events are related to the context state and configuration. The context events will be prefixed with `context.`. You can also use the `CONTEXT_EVENT` enum to listen to these events.
+
+<TwoColumnTable headers={[
+  'Event',
+  'Description'
+]} data={[
+  ['initializing', 'Fired when the context is initializing.'],
+  ['plugins.loaded', 'Fired when all plugins are loaded.'],
+  ['plugins.connected', 'Fired when plugins are connected.'],
+  ['plugins.disconnected', 'Fired when plugins are disconnected.'],
+  ['playback.adapter.loaded', 'Fired when the playback adapter is loaded.'],
+  ['storage.loaded', 'Fired when the storage is loaded.'],
+  ['ready', 'Fired when the context is ready.'],
+  ['dimension.changed', 'Fired when the dimensions of the player change.'],
+  ['fullscreen.changed', 'Fired when the fullscreen state changes.'],
+  ['pip.changed', 'Fired when the picture-in-picture state changes.'],
+  ['destroy', 'Fired when the context is destroyed.'],
+  ['state.changed', 'Fired when the state of the context changes.'],
+  ['options.changed', 'Fired when the options of the context change.'],
+]} />
+
+## State
+
+Vxdk provides an easy API to allow to get the current state of the playback. This is ideal for easy implementation on other front-end frameworks.
+
+Use more specific event changes if you don't need the full state of VXDK.
+
+### Usage
+You are able to get the current state of the player at any time.
+
+```typescript
+vxdk.getState();
+```
+
+You can also listen for state changes.
+```typescript
+vxdk.on(CONTEXT_EVENT.STATE_CHANGED, () => {
+  console.log(vxdk.getState());
+})
+
+```
+
+### State data
+
+The state data will contain the following properties:
+
+<OptionTable headers={['Property','Type', 'Description']} options={[
+  ['ready', 'boolean', 'Vxdk is ready'],
+  ['live', 'boolean', 'Playback type is live'],
+  ['hd', 'boolean', 'Playback quality is HD'],
+  ['focused', 'boolean', 'Main container element is focused'],
+  ['waitingForUser', 'boolean', 'Its waiting for user to start playback'],
+  ['playing', 'boolean', 'Is playing'],
+  ['paused', 'boolean', 'Is paused'],
+  ['buffering', 'boolean', 'Is buffering'],
+  ['started', 'boolean', 'Playback has started'],
+  ['ended', 'boolean', 'Playback has ended'],
+  ['currentTime', 'number', 'Current playback time'],
+  ['duration', 'number', 'Duration of video playback'],
+  ['options', 'Option', 'Current options for playback'],
+  ['bufferedPercentage', 'number', 'Percentage of current buffer'],
+  ['volume', 'number', 'Current volume'],
+  ['muted', 'boolean', 'Is muted'],
+  ['playbackRate', 'number', 'Current playback rate'],
+  ['fullscreen', 'boolean', 'Is fullscreen'],
+  ['pip', 'boolean', 'is picture-in-picture enabled'],
+  ['levels', 'array', 'Available quality levels'],
+  ['level', 'number', 'Current selected level'],
+  ['levelAutoSwitch', 'boolean', 'Is level auto switch enabled'],
+  ['audioLanguages', 'array', 'Current available audio languages'],
+  ['width', 'number', 'Current width of the player'],
+  ['height', 'number', 'Current height of the player'
+]]}/>
+
+../components/table

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["../src/main.ts"],
+  "tsconfig": "../tsconfig.json",
+  "json": "typedoc_export.json",
+  "out": "./pages/typedoc",
+  "plugin": [ "typedoc-plugin-markdown"],
+  "readme": "none",
+  "cleanOutputDir": true,
+  "hideGenerator": true,
+  "hostedBaseUrl": "http://localhost",
+  "entryFileName": "index.md",
+  "hidePageHeader": true,
+  "hideBreadcrumbs": true,
+  "hideGroupHeadings": true,
+  "indexFormat": "table",
+  "flattenOutputFiles": false,
+  "hideParameterTypesInTitle": true,
+
+  "customFooterHtml": "Copyright © 2024 Leo Farias",
+  "defaultCategory": "Other",
+  "categoryOrder": ["Playback","Events", "Other"],
+}

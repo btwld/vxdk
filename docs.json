@@ -1,0 +1,12 @@
+{
+  "name": "VXDK",
+  "theme": "#ab47bc",
+  "favicon": "/assets/favicon.ico",
+  "logo": "/assets/logo.png",
+  "twitter": "leoafarias",
+  "docsearch": {
+    "appId": "...",
+    "apiKey": "...",
+    "indexName": "..."
+  }
+}

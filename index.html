@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>VXDK Sandbox</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bitwild/vxdk@1.0.2/dist/style.css"> -->
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- <script src="/src/index.tsx" type="module"></script>
+    <div id="root"></div> -->
+    <!-- <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@bitwild/vxdk@1.0.2/dist/main.js"
+    ></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@bitwild/vxdk@1.0.2/dist/vxdk.umd.js"></script> -->
+    <script type="module" src="/src/main.ts"></script>
+    <div id="vxdk"></div>
+    <script>
+      const options = {
+        source:
+          "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+        muted: true,
+        autoPlay: false,
+        poster:
+          "https://i.vimeocdn.com/video/1385502527-b86a39ea093d126115c1eae8af8c8db87f1e8c177c05591e2b3302a2b00d3b6d-d_1280",
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const el = document.getElementById("vxdk");
+
+        const vxdk = Vxdk.init(el, options);
+      });
+    </script>
+
+    <!-- <iframe
+      width="560"
+      height="315"
+      src="./demo.html"
+      name="vxdk"
+      title="Vxdk player"
+      frameborder="0"
+      scrolling="no"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+
+    <script>
+      let win = window.frames.vxdk;
+      win.postMessage("message", "*");
+
+      window.addEventListener("message", function (event) {
+        console.log("event", event);
+
+        // can message back using event.source.postMessage(...)
+      });
+    </script> -->
+  </body>
+</html>
